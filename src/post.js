@@ -19,7 +19,9 @@ class Post extends Component  {
 
     constructor(props){
         super(props);
-        this.state = {};
+        this.state = {
+            post : this.props.post,
+        };
     }
 
     render(){
@@ -28,10 +30,10 @@ class Post extends Component  {
                 <div className='content'>
                     Post
                     <p>
-                        <h1>{ this.props.post.content }</h1>
+                        <h1>{ this.state.post.content }</h1>
                     </p>
                 </div>
-                <CommentBox comments={ { number:this.props.post.number , comments : this.props.post.comments }  }/>
+                <CommentBox comments={ { number:this.state.post.number , comments : this.state.post.comments }  }/>
             </div>
         );
     }
