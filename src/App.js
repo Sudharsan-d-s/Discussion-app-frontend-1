@@ -9,7 +9,7 @@ function App() {
 }
 
 setInterval(() => {
-  App
+  App()
 }, 1000);
 
 export default App;
