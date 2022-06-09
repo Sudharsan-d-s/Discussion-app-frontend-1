@@ -40,6 +40,7 @@ class Discussion extends Component{
                         }
                     )
                 )
+                console.log(res.data);
             }
         );
     }
