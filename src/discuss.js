@@ -72,7 +72,7 @@ function CreatePost(props) {
 
     const handleSubmit = (event)=>{
         event.preventDefault()
-        Axios.post('http://discussion-app-backend.herokuapp.com/add-post' , 
+        Axios.post('https://discussion-app-backend.herokuapp.com/add-post' , 
             {
                 content : value
             }

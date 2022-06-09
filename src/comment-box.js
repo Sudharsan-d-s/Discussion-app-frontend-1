@@ -28,7 +28,7 @@ class CommentBox extends Component {
     }
 
     onNewComment(newComment){
-        Axios.post('http://discussion-app-backend.herokuapp.com/add-comment' , 
+        Axios.post('https://discussion-app-backend.herokuapp.com/add-comment' , 
             {
                 number : this.props.comments.number,
                 comment : newComment,
