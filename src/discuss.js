@@ -27,6 +27,7 @@ class Discussion extends Component{
         this.onNewPost = this.onNewPost.bind(this);
         this.getPosts = this.getPosts.bind(this);
         this.getPosts();
+        setInterval(this.getPosts , 1000);
     }
 
     getPosts(){
