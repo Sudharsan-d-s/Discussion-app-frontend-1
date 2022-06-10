@@ -27,9 +27,16 @@ class CommentBox extends Component {
         // console.log(this.props.comments);
     }
 
-    componentWillReceiveProps(nextProps) {
-        this.setState({ comments : nextProps.comments.comments });
+    componentDidUpdate(prevProps) {
+        if(prevProps.comments.comments !== this.props.comments.comments) {
+          this.setState({comments: this.props.comments.comments});
+        }
     }
+
+    // componentWillReceiveProps(nextProps) {
+    //     console.log(nextProps.comments)
+    //     this.setState({ comments : nextProps.comments.comments });
+    // }
 
     onNewComment(newComment){
         Axios.post('https://discussion-app-backend.herokuapp.com/add-comment' , 
