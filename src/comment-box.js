@@ -61,7 +61,7 @@ class CommentBox extends Component {
         return(
             <div>
                 CommentBox
-                <div className='comments'>
+                <div key={this.props.comments.comments} className='comments'>
                     {
                         this.state.comments.map(
                             (c)=>(
