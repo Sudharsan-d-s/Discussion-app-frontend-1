@@ -28,7 +28,7 @@ class CommentBox extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        console.log(prevProps.comments.comments)
+        // console.log(prevProps.comments.comments)
         if(prevProps.comments.comments !== this.props.comments.comments) {
           this.setState({comments: this.props.comments.comments});
         }
